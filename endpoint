@@ -1,0 +1,26 @@
+☁️ Deployed Endpoint
+The API is deployed on AWS and can be tested here:
+
+POST
+
+https://brfgz8pb99.execute-api.us-east-1.amazonaws.com/dev/send-email
+Headers
+Content-Type: application/json
+Request Body
+{
+  "receiver_email": "bagriaditya00@gmail.com",
+  "subject": "Hello from Serverless!",
+  "body_text": "This is a test email."
+}
+📬 Test the Email
+You can test the email sending using Postman or cURL.
+
+Example: Using cURL
+curl -X POST "https://brfgz8pb99.execute-api.us-east-1.amazonaws.com/dev/send-email" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "receiver_email": "bagriaditya00@gmail.com",
+    "subject": "Hello from Serverless!",
+    "body_text": "This is a test email."
+  }'
+If successful, the receiver will get the email in their inbox.
